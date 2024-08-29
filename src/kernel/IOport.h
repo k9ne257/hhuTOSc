@@ -17,7 +17,7 @@
 #define __IOport_include__
 
 
-class IOport {
+class     IOport {
     // Kopieren erlaubt!
 
     // 16-Bit Adresse im I/O-Adressraum
