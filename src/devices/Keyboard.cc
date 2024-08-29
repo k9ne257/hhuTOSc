@@ -1,13 +1,3 @@
-/*****************************************************************************
- *                                                                           *
- *                                  K E Y B O A R D                          *
- *                                                                           *
- *---------------------------------------------------------------------------*
- * Beschreibung:    Treiber für den Tastaturcontroller des PCs.              *
- *                                                                           *
- * Autor:           Olaf Spinczyk, TU Dortmund                               *
- *****************************************************************************/
-
 #include "devices/Keyboard.h"
 
 /* Tabellen fuer ASCII-Codes (Klassenvariablen) intiialisieren */
@@ -270,11 +260,20 @@ Keyboard::Keyboard () :
  *                  ueberprueft werden kann.                                 *
  *****************************************************************************/
 Key Keyboard::key_hit () {
-    Key invalid;  // nicht explizit initialisierte Tasten sind ungueltig
-         
-    /* Hier muss Code eingefuegt werden. */
+   Key invalid;  // nicht explizit initialisierte Tasten sind ungueltig
 
-    return invalid;
+    // Warte, bis ein Tastendruck vorliegt
+    while (!(ctrl_port.inb() & outb));  // Warten bis OUTB Bit gesetzt ist
+
+    // Lese das Tastaturbyte
+    code = data_port.inb();
+
+    // Versuche, das Tastaturbyte zu dekodieren
+    if (key_decoded()) {
+        return gather;  // Erfolgreich dekodiert
+    } else {
+        return invalid;  // Dekodierung nicht abgeschlossen
+    }
 }
 
 
