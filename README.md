@@ -1,10 +1,16 @@
 # Aufgabe 5: Präemptives Multithreading
 
-## Lernziele- Tieferes Verständnis von präemptiven Multitasking- CPU-Entzug mithilfe des PIT- Synchronisierung des Schedulers und des Allokators gegenüber dem PIT-Interrupt
+## Lernziele
+- Tieferes Verständnis von präemptiven Multitasking
+- CPU-Entzug mithilfe des PIT
+- Synchronisierung des Schedulers und des Allokators gegenüber dem PIT-Interrupt
 
 
-## A5.1: Programmable Interval Timer (PIT)Der PIT wird ab sofort verwendet, um eine Systemzeit sowie ein erzwungenes Umschalten zwischen Threads zu realisieren. Die Systemzeit wird in der globalen Variable `systime` (in `Globals.cc`) gespeichert und diese wird bei jedem Interrupt für den PIT inkrementiert. Verwenden Sie hierfür im PIT den Channel 0 und Modus 3 und laden Sie den Zähler mit einem passenden Wert, sodass der PIT alle 10ms ein Interrupt ausgelöst. Jeder Interrupt verursacht also eine Inkrementierung und entspricht einem Tick (10ms). Somit zeigt `systime` an, wie viele Ticks seit dem Beginn der Zeiterfassungvergangen sind. 
-Geben Sie im Interrupt-Handler des PIT den Fortschritt der Systemzeit an einer festen Stelle aus, jedoch nicht bei jedem Tick, sondern nur alle 100 Ticks. Verwenden Sie hierfür beispielsweise die rechte obere Ecke und folgende Zeichen |, /, -, \, wobei das Zeichen bei jeder Ausgabe wechselt. Dadurch, dass ein Zeichenausgabe nur alle 100 Ticks erfolgt, ändert sich das Zeichen ungefähr jede Sekunde. 
+## A5.1: Programmable Interval Timer (PIT)
+Der PIT wird ab sofort verwendet, um eine Systemzeit sowie ein erzwungenes Umschalten zwischen Threads zu realisieren. Die Systemzeit wird in der globalen Variable `systime` (in `Globals.cc`) gespeichert und diese wird bei jedem Interrupt für den PIT inkrementiert. Verwenden Sie hierfür im PIT den Channel 0 und Modus 3 und laden Sie den Zähler mit einem passenden Wert, sodass der PIT alle 10ms ein Interrupt ausgelöst. Jeder Interrupt verursacht also eine Inkrementierung und entspricht einem Tick (10ms). Somit zeigt `systime` an, wie viele Ticks seit dem Beginn der Zeiterfassung
+vergangen sind. 
+
+Geben Sie im Interrupt-Handler des PIT den Fortschritt der Systemzeit an einer festen Stelle aus, jedoch nicht bei jedem Tick, sondern nur alle 100 Ticks. Verwenden Sie hierfür beispielsweise die rechte obere Ecke und folgende Zeichen |, /, -, \, wobei das Zeichen bei jeder Ausgabe wechselt. Dadurch, dass ein Zeichenausgabe nur alle 100 Ticks erfolgt, ändert sich das Zeichen ungefähr jede Sekunde. 
 
 Testen Sie die Klasse PIT indem Sie die ISR für den PIT in main aktivieren und die Ausgabe der Systemzeit überprüfen. 
 Für den PIT gibt es in `Globals.cc`eine globale Variable `pit` und für die Systemzeit die Variabele `systime`.
@@ -43,4 +49,4 @@ Testen Sie das präemptive Multitasking indem Sie eine kleine Demo-Anwendung sch
 
 **Beispielausgab des Testprogramms**
 
-![MTHR](https://github.com/mschoett/hhuTOSc/blob/aufgabe-5/img/mthr.jpg)
+![MTHR](/img/mthr.jpg)
