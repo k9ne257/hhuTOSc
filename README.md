@@ -9,7 +9,7 @@ Allgemeine Hinweise zu einer Heap-Verwaltung finden sich in `MEM-slides.pdf`.
 ## A2.1: Bump-Allocator
 In dieser Aufgabe soll ein sehr einfacher sogenannter Bump-Allocator implementiert werden, um zunächst die Integration in das System zu verstehen sowie die Anbindung an die Programmiersprache. Dieser Allokator kennt lediglich den Heap-Anfang, das Heap-Ende und merkt sich in der Variablen `next` die aktuelle Adresse im Heap, ab welcher der Speicher frei ist. Bei jeder Allokation wird `next` um die gewünschte Anzahl Bytes weitergesetzt, sofern nicht das Heap-Ende erreicht ist, siehe Abbildung.
 
-![Bump-Allocator](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/bump_allocator.jpg)
+![Bump-Allocator](/img/bump_allocator.jpg)
 
 Die Heapgröße ist fest auf 1 MB eingestellt, im Speicherbereich 3 – 4 MB. Bei einer Speicherfreigabe passiert nichts. Bauen Sie die Vorgabe in Ihr System ein und stellen Sie sicher, dass der Heap möglichst bald in der Einstiegsfunktion des Betriebssystems initialisiert wird.
 
@@ -27,7 +27,7 @@ In folgenden Dateien müssen Quelltexte einfügt werden: `user/aufgabe2/HeapDe
 ## A2.2: Listenbasierter Allokator
 In dieser Aufgabe soll ein verbesserter Allokator implementiert werden, welcher freigegeben Speicherblöcke wiederverwenden kann. Hierzu sollen alle freien Blöcke miteinander verkettet werden, siehe Abbildung.
 
-![List-Allocator](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/list_allocator.jpg)
+![List-Allocator](/img/list_allocator.jpg)
 
 Zu Beginn gibt es nur einen großen freien Speicherblock, der den gesamten freien Speicher umfasst. Im Rahmen der Heap-Initialisierung soll dieser eine freie Block als erster und einziger Eintrag in der verketteten Freispeicherliste gespeichert werden, siehe Abbildung.
 
@@ -62,10 +62,10 @@ In folgenden Dateien müssen Quelltexte einfügt werden: `devices/PCSPK.cc` un
 ## Beispielausgaben zur Speicherverwaltung
 Nachstehend sind einige Screenshots zum Testen der Speicherverwaltung. Sie können sich natürlich selbst Testfunktionen und Testausgaben überlegen. Sollten die Ausgaben über mehrere Seiten gehen bietet es sich an auf einen Tastendruck mit `kb.keyhit()` zu warten. 
 
-![Heap1](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/heap1.jpg)
+![Heap1](/img/heap1.jpg)
 
-![Heap2](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/heap2.jpg)
+![Heap2](/img/heap2.jpg)
 
-![Heap3](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/heap3.jpg)
+![Heap3](/img/heap3.jpg)
 
-![Heap4](https://github.com/mschoett/hhuTOSc/blob/aufgabe-2/img/heap4.jpg)
+![Heap4](/img/heap4.jpg)
