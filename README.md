@@ -30,7 +30,7 @@ In folgenden Dateien muss Code implementiert werden: `kernel/corouts/Coroutine.a
 
 **Beispielausgaben der Koroutinen**
 
-![KOR1](https://github.com/hhu-bsinfo/hhuTOSc/blob/aufgabe-4/img/corouts.jpg)
+![KOR1](/img/corouts.jpg)
 
 (In eckigen Klammern wird die Koroutinen-ID angezeigt.)
 
@@ -77,4 +77,4 @@ Als zweiter eigener Test soll nun eine multi-threaded Testanwendung bestehend au
 
 **Beispielausgaben der Threads**
 
-![THR](https://github.com/hhu-bsinfo/hhuTOSc/blob/aufgabe-4/img/threads.jpg)
+![THR](/img/threads.jpg)
