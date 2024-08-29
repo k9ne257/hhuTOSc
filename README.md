@@ -32,4 +32,4 @@ Folgende Dateien sind für die Grafik-Unterstützung in der Vorgabe:
 
 **Beispielausgabe der Grafikdemo**
 
-![GD](https://github.com/hhu-bsinfo/hhuTOSc/blob/aufgabe-7/img/graphic.jpg)
+![GD](/img/graphic.jpg)
