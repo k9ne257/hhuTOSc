@@ -1,17 +1,24 @@
 # Aufgabe 1: Ein-/Ausgabe
 
-## Lernziele1. Kennenlernen der Entwicklungsumgebung
+## Lernziele
+1. Kennenlernen der Entwicklungsumgebung
 2. Einarbeiten in die Programmiersprache C++ 
-3. Hardwarenahe Programmierung: CGA-Bildschirm und Tastatur## A1.1: CGA-BildschirmFür Testausgaben und zur Erleichterung der Fehlersuche soll das Betriebssystem zunächst Ausgabefunktionen für den Textbildschirm erhalten. Die Funktionsfähigkeit soll mit Hilfe eines aussagefähigen Testprogramms gezeigt werden, siehe Bildschirmfoto unten.
+3. Hardwarenahe Programmierung: CGA-Bildschirm und Tastatur
+
+
+## A1.1: CGA-Bildschirm
+Für Testausgaben und zur Erleichterung der Fehlersuche soll das Betriebssystem zunächst Ausgabefunktionen für den Textbildschirm erhalten. Die Funktionsfähigkeit soll mit Hilfe eines aussagefähigen Testprogramms gezeigt werden, siehe Bildschirmfoto unten.
+
 Dazu soll in `main.cc` in der Einstiegsfunktion `main` das Objekt `kout` für verschieden formatierte Ausgaben genutzt werden. Diese sollen ähnlich wie bei der C++ IO-Streams Bibliothek verwendet werden können. Damit die Ausgabefunktionen überall in hhuTOS genutzt werden kann, ist in der gegebenen Klasse `Gobals`, ein globales `CGA_Stream`-Objekt `kout` bereits definiert.
-In folgenden Dateien müssen Quelltexte einfügt werden:
+
+In folgenden Dateien müssen Quelltexte einfügt werden:
 `main.cc`, `devices/CGA.cc` und `user/aufgabe1/TextDemo.cc`.
 
 *Beachten Sie die Kommentare im Quelltext der Vorgabe, sowie die Datei* `CGA-slides.pdf`
 
 ### Beispielausgaben
 
-![CGA](https://github.com/mschoett/hhuTOSc/blob/aufgabe-1/img/cga.jpg)
+![CGA](/img/cga.jpg)
 
 
 ## A1.2: Tastatur
